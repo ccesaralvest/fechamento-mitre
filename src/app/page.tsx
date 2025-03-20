@@ -35,7 +35,7 @@ type InputForm = {
 const InputFormSchema = z.object({
   name: z.string().min(3, "Nome deve ter pelo menos 3 caracteres"),
   email: z.string().email("Email inválido"),
-  fone: z.string().regex(/^\+?[0-9]{10,15}$/, "Telefone inválido"),
+  fone: z.string(),
   message: z.string().min(10, "Mensagem deve ter pelo menos 10 caracteres"),
 });
 

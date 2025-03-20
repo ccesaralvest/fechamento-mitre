@@ -34,7 +34,7 @@ interface WeekDay {
 const FormSchema = z.object({
   name: z.string().min(3, "Nome tem que possuir pelo menos 3 caracteres"),
   email: z.string().email("Email inválido"),
-  fone: z.string().regex(/^\+?[0-9]{10,15}$/, "Telefone inválido"),
+  fone: z.string(),
   date: z.string().min(1, "Selecione uma data"),
   time: z.string().min(1, "Selecione um horário"),
 });
