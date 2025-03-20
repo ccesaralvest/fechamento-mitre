@@ -32,9 +32,7 @@ body {
   font-style: normal;
   font-display: swap;
 }
-.externalAreas li:last-child span {
-  margin-top: 20px;
-}
+
 @layer base {
   
   :root {
@@ -141,6 +139,10 @@ header {
   text-align: center;
   padding-top: 6px;
   padding-bottom: 3px;
+}
+.btn-planta-selction {
+  margin-bottom: 3px;
+  margin-right: 3px;
 }
 @media only screen and (max-width: 768px) {
   .adress-box {

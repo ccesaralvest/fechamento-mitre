@@ -13,12 +13,28 @@ const apartmentTypes = [
     image: "imgs/plantas/planta-1.png",
   },
   {
+    size: "63 M²",
+    type: "2 DORM. AMPLIADO",
+    details: "2 DORMS. • SUITE • VAGA OPÇÃO LIVING AMPLIADO",
+    finalText:
+      "Ilustração artística da planta de 63m2, final 20 com sugestão de decoração. Os móveis e utensílios são de dimensões comerciais e não fazem parte do contrato de compra e venda do imóvel. As medidas são de face a face das paredes. A planta apresentada é ilustrativa e contém sugestão de decoração.",
+    image: "imgs/plantas/planta-1-ampliado.png",
+  },
+  {
     size: "43 M²",
     type: "1 DORM.",
     finalText:
       "Ilustração artística da planta de 43m2, final 21 com sugestão de decoração. Os móveis e utensílios são de dimensões comerciais e não fazem parte do contrato de compra e venda do imóvel. As medidas são de face a face das paredes. A planta apresentada é ilustrativa e contém sugestão de decoração.",
     details: "1 DORM. • SUITE • VAGA",
     image: "imgs/plantas/planta-2.png",
+  },
+  {
+    size: "43 M²",
+    type: "1 DORM. AMPLIADO",
+    finalText:
+      "Ilustração artística da planta de 43m2, final 21 com sugestão de decoração. Os móveis e utensílios são de dimensões comerciais e não fazem parte do contrato de compra e venda do imóvel. As medidas são de face a face das paredes. A planta apresentada é ilustrativa e contém sugestão de decoração.",
+    details: "1 DORM. • SUITE • VAGA",
+    image: "imgs/plantas/plantas-2-ampliado.png",
   },
   {
     size: "31 M²",
@@ -50,6 +66,34 @@ const apartmentFeatures = [
     "Ponto elétrico para instalação de churrasqueira elétrica no terraço social",
     "Laje nivelada entre terraço social e sala de estar",
     "Unidade entregue com piso laminado nos dormitórios e revestimento nas áreas molhadas",
+    "Espaço independente de área técnica para condensadora de ar-condicionado",
+    "Personal Home by Mitre - Oferta de acabamentos e equipamentos para a personalização da unidade",
+  ],
+  [
+    "Infraestrutura para ar-condicionado na sala de estar e dormitórios",
+    "Infraestrutura para aquecedor de passagem a gás",
+    "Ponto de água quente na cozinha e banhos",
+    "Bacia com válvula dual flux",
+    "Bancadas da cozinha e banheiro entregues",
+    "Ponto para máquina de lavar louça na cozinha",
+    "Ponto elétrico para instalação de churrasqueira elétrica no terraço social",
+    "Laje nivelada entre terraço social e sala de estar",
+    "Unidade entregue com piso laminado nos dormitórios e revestimento nas áreas molhadas",
+    "Espaço independente de área técnica para condensadora de ar-condicionado",
+    "Personal Home by Mitre - Oferta de acabamentos e equipamentos para a personalização da unidade",
+  ],
+  [
+    "Infraestrutura para ar-condicionado na sala de estar e suíte",
+    "Lavabo",
+    "Ponto de água quente na cozinha e banho",
+    "Ponto para máquina de lavar louça na cozinha",
+    "Bacia com válvula dual flux",
+    "Bancadas da cozinha e banheiro entregues",
+    "Ponto elétrico para grill elétrico no terraço social",
+    "Infraestrutura para aquecedor de passagem a gás",
+    "Laje nivelada entre terraço social e sala de estar",
+    "Janela da suíte com persiana de enrolar",
+    "Unidade entregue com piso laminado no dormitório e revestimento nas áreas molhadas",
     "Espaço independente de área técnica para condensadora de ar-condicionado",
     "Personal Home by Mitre - Oferta de acabamentos e equipamentos para a personalização da unidade",
   ],
@@ -156,7 +200,7 @@ function PlantasResidenciais() {
               {apartmentTypes.map((apt, index) => (
                 <button
                   key={index}
-                  className={`py-3 px-2 border border-black transition-colors text-xs ${
+                  className={`btn-planta-selction py-3 px-2 border border-black transition-colors text-xs ${
                     selectedType === index
                       ? "bg-black text-white"
                       : "bg-white text-black"
@@ -174,7 +218,7 @@ function PlantasResidenciais() {
                   href="#plantas-title"
                   key={index}
                   onClick={() => setSelectedType(index)}
-                  className={`text-center py-3 px-4 border border-black transition-colors ${
+                  className={` text-center py-3 px-4 border border-black transition-colors ${
                     selectedType === index
                       ? "bg-black text-white"
                       : "bg-white text-black"
