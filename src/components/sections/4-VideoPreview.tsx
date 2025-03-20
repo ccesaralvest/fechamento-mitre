@@ -30,7 +30,7 @@ const VideoPreview = () => {
           <iframe
             width="100%"
             height="100%"
-            src="https://www.youtube.com/embed/_soJx6NFIsA"
+            src="https://www.youtube.com/embed/F21F4A-KSsY?si=ZfwMwTulNJ2pBzN8"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
