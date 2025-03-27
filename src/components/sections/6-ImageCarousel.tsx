@@ -19,15 +19,15 @@ import {
 const images = [
   {
     src: "/imgs/imgsCarousel/SPORTSARENA.jpg",
-    description: "Perspectiva ilustrada da SPORT ARENA",
+    description: "Perspectiva ilustrada da EMBASAMENTOJUNIOR",
   },
   {
     src: "/imgs/imgsCarousel/BEATYCARE.jpg",
-    description: "Perspectiva ilustrada da BEATY CARE",
+    description: "Perspectiva ilustrada da BEATYCARE",
   },
   {
     src: "/imgs/imgsCarousel/CELEBRATIONHALL.jpg",
-    description: "Perspectiva ilustrada CELEBRATION HALL",
+    description: "Uma outra CELEBRATION HALL",
   },
   {
     src: "/imgs/imgsCarousel/COWORKING.jpg",
@@ -35,7 +35,7 @@ const images = [
   },
   {
     src: "/imgs/imgsCarousel/EMBASAMENTOJUNIOR.jpg",
-    description: "Perspectiva ilustrada da EMBASAMENTO AV ROQUE PETRONI JUNIOR",
+    description: "Perspectiva ilustrada da EMBASAMENTOJUNIOR",
   },
 ];
 

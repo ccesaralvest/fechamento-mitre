@@ -14,7 +14,7 @@ const apartmentTypes = [
   },
   {
     size: "63 M²",
-    type: "2 DORM. AMPLIADO",
+    type: "2 DORM. LIVING AMPLIADO",
     details: "2 DORMS. • SUITE • VAGA OPÇÃO LIVING AMPLIADO",
     finalText:
       "Ilustração artística da planta de 63m2, final 20 com sugestão de decoração. Os móveis e utensílios são de dimensões comerciais e não fazem parte do contrato de compra e venda do imóvel. As medidas são de face a face das paredes. A planta apresentada é ilustrativa e contém sugestão de decoração.",
@@ -30,7 +30,7 @@ const apartmentTypes = [
   },
   {
     size: "43 M²",
-    type: "1 DORM. AMPLIADO",
+    type: "1 DORM. LIVING AMPLIADO",
     finalText:
       "Ilustração artística da planta de 43m2, final 21 com sugestão de decoração. Os móveis e utensílios são de dimensões comerciais e não fazem parte do contrato de compra e venda do imóvel. As medidas são de face a face das paredes. A planta apresentada é ilustrativa e contém sugestão de decoração.",
     details: "1 DORM. • SUITE • VAGA",

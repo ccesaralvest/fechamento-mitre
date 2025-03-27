@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 import React from "react";
 
@@ -100,7 +99,7 @@ const FloorPlan: React.FC = () => {
               <h2 className="text-base font-bold mb-2 uppercase">
                 Áreas Externas
               </h2>
-              <ul className="space-y-1 externalAreas">
+              <ul className="space-y-1">
                 {externalAreas.map((area) => (
                   <li key={area.id} className="flex items-start text-xs">
                     <span className="font-medium mr-1">{area.id}.</span>
@@ -182,7 +181,7 @@ const FloorPlan: React.FC = () => {
               <h2 className="text-base font-bold mb-2 uppercase">
                 Áreas Externas
               </h2>
-              <ul className="space-y-1 externalAreas">
+              <ul className="space-y-1">
                 {externalAreas.map((area) => (
                   <li key={area.id} className="flex items-start text-xs">
                     <span className="font-medium mr-1">{area.id}.</span>
