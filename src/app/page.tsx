@@ -1,29 +1,29 @@
 "use client";
 import { useEffect, useState } from "react";
-import ImageCarousel from "@/components/sections/6-ImageCarousel";
-import Header from "@/components/sections/0-Header";
-import Hero from "@/components/sections/1-Hero";
-import VideoPreview from "@/components/sections/4-VideoPreview";
-import Services from "@/components/sections/5-Services";
-import Tribeca from "@/components/sections/2-Tribeca";
-import Professionals from "@/components/sections/3-Professionals";
-import PlantasResidenciais from "@/components/sections/7-PlantasResidenciais";
-import Contact from "@/components/sections/9-Contact";
-import Footer from "@/components/sections/10-Footer";
-import FloorPlan from "@/components/sections/6-b-Floor";
-import { GoogleTagManager } from "@next/third-parties/google";
-import ContactModal from "@/components/ui/ContactModal";
-import LocationItemOutput from "@/components/sections/9-b-Gastronomia";
-import EventCardComponent from "@/components/sections/12-Event";
-import LocalCity from "@/components/sections/8-LocalCity";
-import { type LeadResponseOrUndefined, postLead } from "@/api/Leads";
+import { type LeadResponseOrUndefined, postLead } from "@/api/leads";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
-import AOS from "aos";
+import { GoogleTagManager } from "@next/third-parties/google";
+import aos from "aos";
+import Header from "@/components/common/header/header";
+import HeroSection from "@/components/sections/hero-section/hero-section";
+import OnBoardSection from "@/components/sections/onboard-section/onboard-section";
+import ProfessionalsSection from "@/components/sections/professionals-section/professionals-section";
+import AboutUsSection from "@/components/sections/about-us-section/about-us-section";
+import ImageCarouselSection from "@/components/sections/image-carousel-section/image-carousel-section";
+import ServicesSection from "@/components/sections/services-section/services-section";
+import PlantsSection from "@/components/sections/plants-section/plants-section";
+import CommonAreasSection from "@/components/sections/common-areas-section/common-areas-section";
+import ContactModal from "@/components/ui/contact-modal";
+import GastronomySection from "@/components/sections/gastronomy-section/gastronomy-section";
+import LocationSection from "@/components/sections/location-section/location-section";
+import EventSection from "@/components/sections/event-section/event-section";
+import ContactEventsSection from "@/components/sections/contact-events-section/contact-events-section";
+import Contact from "@/components/common/contact/contact";
+import Footer from "@/components/common/footer/footer";
 import "aos/dist/aos.css";
-import ContactEvents from "@/components/sections/9-b-ContactEvents";
 
 type InputForm = {
   name: string;
@@ -63,17 +63,19 @@ export default function Home() {
   const onSubmit = async (data: InputForm) => {
     try {
       const response: LeadResponseOrUndefined = await postLead(data);
-      if (response) console.log("enviado");
+
+      if (response) {
+        console.log("enviado");
+      }
     } catch (error: unknown) {
       toast.error(
         error instanceof Error
           ? error.message
-          : "Não foi possível enviar os dados"
+          : "Error while fetch data"
       );
     }
   };
 
-  // Captura os valores do EventCardComponent
   const handleEventData = (data: {
     name: string;
     email: string;
@@ -86,7 +88,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-    AOS.init({
+    aos.init({
       duration: 1000,
       once: true,
     });
@@ -96,8 +98,8 @@ export default function Home() {
     const checkHash = () => {
       if (typeof window !== "undefined") {
         if (
-          window.location.hash === "#eventCard" ||
-          window.location.hash === "#contactEvents"
+          window.location.hash === "#event-section" ||
+          window.location.hash === "#contact-events-section"
         ) {
           setShowEventOnly(true);
         } else {
@@ -125,6 +127,7 @@ export default function Home() {
     if (!showEventOnly) {
       setTimeout(() => {
         const currentHash = window.location.hash;
+
         if (currentHash) {
           document
             .getElementById(currentHash.substring(1))
@@ -153,8 +156,8 @@ export default function Home() {
         setValue("fone", eventData.fone);
 
         if (
-          window.location.hash === "#eventCard" ||
-          window.location.hash === "#contactEvents" ||
+          window.location.hash === "#event-section" ||
+          window.location.hash === "#contact-events-section" ||
           typeof window !== "undefined"
         ) {
           setValue(
@@ -179,8 +182,8 @@ export default function Home() {
 
       {showEventOnly ? (
         <>
-          <EventCardComponent onEventSelect={handleEventData} />
-          <ContactEvents
+          <EventSection onEventSelect={handleEventData} />
+          <ContactEventsSection
             handleSubmit={handleSubmit}
             register={register}
             errors={errors}
@@ -191,16 +194,16 @@ export default function Home() {
         </>
       ) : (
         <>
-          <Hero />
-          <Tribeca />
-          <Professionals />
-          <VideoPreview />
-          <ImageCarousel />
-          <Services />
-          <FloorPlan />
-          <PlantasResidenciais />
-          <LocalCity />
-          <LocationItemOutput />
+          <HeroSection />
+          <OnBoardSection />
+          <ProfessionalsSection />
+          <AboutUsSection />
+          <ImageCarouselSection />
+          <ServicesSection />
+          <CommonAreasSection />
+          <PlantsSection />
+          <LocationSection />
+          <GastronomySection />
           <Contact
             handleSubmit={handleSubmit}
             register={register}

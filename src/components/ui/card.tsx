@@ -1,5 +1,4 @@
 import * as React from "react"
-
 import { cn } from "@/lib/utils"
 
 const Card = React.forwardRef<
@@ -15,6 +14,7 @@ const Card = React.forwardRef<
     {...props}
   />
 ))
+
 Card.displayName = "Card"
 
 const CardHeader = React.forwardRef<
@@ -27,6 +27,7 @@ const CardHeader = React.forwardRef<
     {...props}
   />
 ))
+
 CardHeader.displayName = "CardHeader"
 
 const CardTitle = React.forwardRef<
@@ -39,6 +40,7 @@ const CardTitle = React.forwardRef<
     {...props}
   />
 ))
+
 CardTitle.displayName = "CardTitle"
 
 const CardDescription = React.forwardRef<
@@ -51,6 +53,7 @@ const CardDescription = React.forwardRef<
     {...props}
   />
 ))
+
 CardDescription.displayName = "CardDescription"
 
 const CardContent = React.forwardRef<
@@ -59,6 +62,7 @@ const CardContent = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
 ))
+
 CardContent.displayName = "CardContent"
 
 const CardFooter = React.forwardRef<
@@ -71,6 +75,7 @@ const CardFooter = React.forwardRef<
     {...props}
   />
 ))
+
 CardFooter.displayName = "CardFooter"
 
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }

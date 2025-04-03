@@ -1,39 +1,38 @@
 import Image from "next/image";
-import ConfiraTodosItens from "../ConfiraTodosItens";
-import Map from "../Map";
+import CheckAllItems from "src/components/check-all-items";
+import Map from "src/components/";
 
 const Localizacao = () => {
   return (
     <section id="localizacao" className="sm:hidden">
-      <ConfiraTodosItens />
+      <CheckAllItems />
       <div className="relative flex flex-col items-center w-full h-full  sm:flex-row  sm:h-[49.1rem]">
-        <div className="bg-[url(/imgs/cement-wall.jpeg)] opacity-[0.4] h-full mt-[10rem]  w-full sm:h-[938px] sm:mt-[10rem] absolute "></div>
+        <div className="bg-[url(/imgs/cement-wall.jpeg)] opacity-[0.4] h-full mt-[10rem]  w-full sm:h-[938px] sm:mt-[10rem] absolute" />
         <div className="relative w-full h-[251px] mt-7 sm:h-full sm:flex-1  sm:order-2  sm:w-[146px] xl:-mt-[5rem]  xl:mr-16">
           <Image
-            src="/imgs/localizacao.png"
             fill
+            src="/imgs/localizacao.png"
             alt="Localização"
             className="object-contain z-10 "
           />
         </div>
-        <div className="flex-1  relative  flex flex-col items-center  sm:pt-[8rem] sm:h-full ">
+        <div className="flex-1  relative  flex flex-col items-center  sm:pt-[8rem] sm:h-full">
           <div className="relative    xl:w-[608px]">
             <span className="font-adero text-black font-semibold text-base uppercase text-[16px]  xl:text-[32px] text-left">
               LOCALIZAÇÃO
             </span>
             <div className="absolute inset-0">
-              <div className="absolute w-[110%] -bottom-1 -left-7 border-t border-foreground xl:border-2 xl:-bottom-4 xl:w-[16rem] xl:-left-[11rem]"></div>
-              <div className="absolute -left-3 h-[300%] -top-8 bottom-0 border-r border-foreground xl:border-2 xl:-left-6 xl:h-[17rem] xl:-top-[8rem]"></div>
+              <div className="absolute w-[110%] -bottom-1 -left-7 border-t border-[#8B3A2A] xl:border-2 xl:-bottom-4 xl:w-[16rem] xl:-left-[11rem]" />
+              <div className="absolute -left-3 h-[300%] -top-8 bottom-0 border-r border-[#8B3A2A] xl:border-2 xl:-left-6 xl:h-[17rem] xl:-top-[8rem]" />
             </div>
           </div>
-          <div className="font-unineue text-[8px] text-black p-10 space-y-5   xl:text-[16px] xl:w-[608px] xl:space-y-11 xl:mt-20 xl:p-0 ">
+          <div className="font-unineue text-[8px] text-black p-10 space-y-5   xl:text-[16px] xl:w-[608px] xl:space-y-11 xl:mt-20 xl:p-0">
             <p>
               Sucesso de vendas e já consagrada na capital paulista, a linha
               Haus Mitre surpreende novamente com uma edio especial que respira
               sofisticação e bom-gosto. E a escolha do bairro não poderia ser
               diferente.
             </p>
-
             <p>
               O protagonismo do Brooklin em São Paulo evoca Nova York em todos
               os sentidos. Além de prestar homenagem ao famoso bairro da cidade
@@ -44,7 +43,6 @@ const Localizacao = () => {
               ao eixo Faria Lima-Chucri Zaidan, o maior vetor de crescimento em
               São Paulo.
             </p>
-
             <p>
               Assim como Brooklyn e Nova York são organismos vivos e
               inseparáveis, o mesmo se aplica ao Brooklin SP. A região se
@@ -59,17 +57,17 @@ const Localizacao = () => {
       </div>
       <div className="flex flex-col items-center xl:p-[5rem]">
         <Map />
-        <div className="flex flex-col w-full items-center sm:flex-row   ">
-          <div className="relative w-[207px] mt-10 order-1 sm:order-2 sm:hidden  ">
+        <div className="flex flex-col w-full items-center sm:flex-row">
+          <div className="relative w-[207px] mt-10 order-1 sm:order-2 sm:hidden">
             <span className="font-adero text-black  text-base uppercase text-[16px] xl:text-[32px]">
               vivencia uma das localizações mais privilegiadas de são paulo.
             </span>
             <div className="absolute inset-0">
-              <div className="absolute w-[110%] -bottom-1 -left-7 border-t border-foreground"></div>
-              <div className="absolute -left-3 h-[158px] -top-10 bottom-0 border-r border-foreground"></div>
+              <div className="absolute w-[110%] -bottom-1 -left-7 border-t border-[#8B3A2A]" />
+              <div className="absolute -left-3 h-[158px] -top-10 bottom-0 border-r border-[#8B3A2A]" />
             </div>
           </div>
-          <div className="relative order-2 sm:order-1 w-full h-[375px] mt-8 xl:order-1 xl:w-[550px] xl:min-h-[1060px] ">
+          <div className="relative order-2 sm:order-1 w-full h-[375px] mt-8 xl:order-1 xl:w-[550px] xl:min-h-[1060px]">
             <Image
               src="/imgs/shutterstock.jpeg"
               layout="fill"
@@ -77,18 +75,18 @@ const Localizacao = () => {
               alt=""
             />
           </div>
-          <div className="font-unineue uppercase text-[12px] text-black p-14 text-sm/6 space-y-5 flex-col order-2 sm:ml-[7rem]  ">
-            <div className="hidden sm:block relative mt-5  w-[28rem]  order-2 ">
+          <div className="font-unineue uppercase text-[12px] text-black p-14 text-sm/6 space-y-5 flex-col order-2 sm:ml-[7rem]">
+            <div className="hidden sm:block relative mt-5  w-[28rem]  order-2">
               <span className="font-adero text-black leading-relaxed  text-base uppercase text-[16px] xl:text-[32px]">
                 vivencia uma das localizações mais privilegiadas de são paulo.
               </span>
               <div className="absolute inset-0">
-                <div className="absolute w-[50rem] -top-7 -left-[7rem] border-t border-foreground xl:border-2"></div>
-                <div className="absolute -left-6 h-[16.8rem] -top-[9.1rem]  border-r border-foreground xl:border-2 "></div>
+                <div className="absolute w-[50rem] -top-7 -left-[7rem] border-t border-[#8B3A2A] xl:border-2" />
+                <div className="absolute -left-6 h-[16.8rem] -top-[9.1rem]  border-r border-[#8B3A2A] xl:border-2" />
               </div>
             </div>
             <div className="sm:flex sm:gap-14">
-              <div className="flex flex-col space-y-4  sm:w-1/2  xl:w-[428px] ">
+              <div className="flex flex-col space-y-4  sm:w-1/2  xl:w-[428px]">
                 <div>
                   <p className="font-bold sm:text-[14px]">parques</p>
                   <p className="font-thin sm:text-[14px]">

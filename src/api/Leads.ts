@@ -5,6 +5,7 @@ type PostLeadDto = {
   fone: string;
   message: string;
 };
+
 type LeadResponse = {
   leadId: string;
   requestId: string;
@@ -12,14 +13,15 @@ type LeadResponse = {
   success: boolean;
 };
 
-
 export interface LeadData {
   name: string;
   email: string;
   fone: string;
   message: string;
 }
+
 export type LeadResponseOrUndefined = LeadResponse | undefined;
+
 const API_URL = "https://leads.mitrerealty.com.br/api-leads/leads";
 
 export const postLead = async (
@@ -48,5 +50,3 @@ export const postLead = async (
     throw error;
   }
 };
-
- 

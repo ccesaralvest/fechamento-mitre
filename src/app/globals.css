@@ -12,29 +12,101 @@ body {
 
 @font-face {
   font-family: 'Adero';
+  src: url('/fonts/Adero/AderoTrial-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Adero';
+  src: url('/fonts/Adero/AderoTrial-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Adero';
   src: url('/fonts/Adero/AderoTrial-Regular.otf') format('opentype');
-  font-weight: normal;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Adero';
+  src: url('/fonts/Adero/AderoTrial-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Adero';
+  src: url('/fonts/Adero/AderoTrial-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Adero';
+  src: url('/fonts/Adero/AderoTrial-ExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Adero';
+  src: url('/fonts/Adero/AderoTrial-Black.otf') format('opentype');
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'UniNeue';
-  src: url('/fonts/UneNeue/UniNeueRegular.otf') format('opentype');
-  font-weight: normal;
+  src: url('/fonts/UniNeue/UniNeueThin.otf') format('opentype');
+  font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
-  font-family: 'UniNeue Trial Bold';
-  src: url('/fonts/UniNeue-Trial-Bold.ttf') format('truetype');
-  font-weight: normal;
+  font-family: 'UniNeue';
+  src: url('/fonts/UniNeue/UniNeueRegular.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'UniNeue';
+  src: url('/fonts/UniNeue/UniNeueBold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'UniNeue';
+  src: url('/fonts/UniNeue/UniNeueExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'UniNeue';
+  src: url('/fonts/UniNeue/UniNeueBlack.otf') format('opentype');
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
 @layer base {
-  
   :root {
     --background: 0 0% 100%;
     --foreground: 10, 49%, 34%;    ;
@@ -61,8 +133,8 @@ body {
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
-    
   }
+
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -104,6 +176,13 @@ body {
 }
 
 /* Header */
+header {
+  position: fixed;
+  z-index: 30;
+  background-color: white;
+  min-height: 61px;
+}
+
 .header-ul-primary {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -111,12 +190,7 @@ body {
   max-width: 1920px;
   margin: 0 auto;
 }
-header {
-  position: fixed;
-  z-index: 30;
-  background-color: white;
-  min-height: 61px;
-}
+
 .btn-contact {
   right: 2%!important;
 }
@@ -140,10 +214,13 @@ header {
   padding-top: 6px;
   padding-bottom: 3px;
 }
+
 .btn-planta-selction {
   margin-bottom: 3px;
   margin-right: 3px;
+  height: 54px;
 }
+
 @media only screen and (max-width: 768px) {
   .adress-box {
     /* position: relative; */

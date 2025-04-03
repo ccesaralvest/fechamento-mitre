@@ -6,7 +6,7 @@ const center = {
   lng: -122.4194,
 };
 
-export default function Map() {
+const Map = () => {
   const mapOptions = {
     disableDefaultUI: true,
     zoomControl: false,
@@ -36,3 +36,5 @@ export default function Map() {
     </div>
   );
 }
+
+export default Map;

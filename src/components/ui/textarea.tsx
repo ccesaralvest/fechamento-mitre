@@ -1,5 +1,4 @@
 import * as React from "react"
-
 import { cn } from "@/lib/utils"
 
 const Textarea = React.forwardRef<
@@ -17,6 +16,7 @@ const Textarea = React.forwardRef<
     />
   )
 })
+
 Textarea.displayName = "Textarea"
 
 export { Textarea }
